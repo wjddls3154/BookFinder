@@ -45,13 +45,28 @@
         <!--View Controller-->
         <scene sceneID="rn3-eh-Lss">
             <objects>
-                <viewController id="bvG-DL-PzV" sceneMemberID="viewController">
+                <viewController id="bvG-DL-PzV" customClass="ViewController" customModule="BookFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tdd-4j-ggK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Glc-em-QrN">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3EI-V5-0SV" firstAttribute="trailing" secondItem="Glc-em-QrN" secondAttribute="trailing" id="0xW-f0-FpZ"/>
+                            <constraint firstItem="Glc-em-QrN" firstAttribute="leading" secondItem="3EI-V5-0SV" secondAttribute="leading" id="4hz-aD-m0o"/>
+                            <constraint firstItem="Glc-em-QrN" firstAttribute="top" secondItem="3EI-V5-0SV" secondAttribute="top" id="lgm-M2-Nr3"/>
+                            <constraint firstItem="3EI-V5-0SV" firstAttribute="bottom" secondItem="Glc-em-QrN" secondAttribute="bottom" id="yY2-FN-NXa"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="3EI-V5-0SV"/>
                     </view>
+                    <connections>
+                        <outlet property="myWebView" destination="Glc-em-QrN" id="36B-oy-8j2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R3N-jh-KWT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
